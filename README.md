@@ -1,6 +1,6 @@
 # Blast Docs
 
-Public customer documentation for Blast Boombox 0.5.0. English and Spanish. Static HTML, CSS and JavaScript; no build dependencies.
+Public customer documentation portal for Blast scripts. Blast Boombox 0.5.0 is the first documented product. English and Spanish. Static HTML, CSS and JavaScript; no build dependencies.
 
 ## Local preview
 
@@ -13,6 +13,7 @@ Enable Settings → Pages → Deploy from a branch → `main` → `/ (root)`. Gi
 ## Editing
 
 - `content.js`: paired English/Spanish page content and customer examples.
+- `portal.js`: general docs pages, product registry and scoped product routes.
 - `app.js`: routing, navigation, search, copy buttons, language and inventory tabs.
 - `styles.css`: layout and branding.
 - `downloads/`: public inventory definitions and inventory images only.

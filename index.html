@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0c0e">
-  <meta name="description" content="Official Blast Boombox documentation for FiveM. Installation, inventory integration, speakers, RadioCar and administration.">
-  <title>Installation · Blast Docs</title>
+  <meta name="description" content="Official documentation for Blast FiveM scripts. Browse product installation, configuration and usage guides.">
+  <title>Blast Docs</title>
   <link rel="icon" href="assets/blast-logo.png">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="content.js"></script>
-  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="styles.css?v=portal-1">
+  <script defer src="content.js?v=portal-1"></script>
+  <script defer src="portal.js?v=portal-1"></script>
+  <script defer src="app.js?v=portal-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#article">Skip to content</a>
   <header class="header">
     <div class="header-inner">
-      <a href="#overview" class="brand" aria-label="Blast Docs home"><img src="assets/blast-logo.png" alt="" width="40" height="40"><span>Blast<span class="brand-divider"></span><span class="brand-docs">Docs</span></span></a>
-      <nav class="top-nav" aria-label="Main"><a href="#overview" data-i18n="overview">Overview</a><a href="#installation" data-i18n="documentation">Documentation</a></nav>
+      <a href="#home" class="brand" aria-label="Blast Docs home"><img src="assets/blast-logo.png" alt="" width="40" height="40"><span>Blast<span class="brand-divider"></span><span class="brand-docs">Docs</span></span></a>
+      <nav class="top-nav" aria-label="Main"><a href="#home" data-i18n="home">Home</a><a href="#scripts" data-i18n="scripts">Scripts</a></nav>
       <div class="header-actions"><button class="global-search" id="open-search"><span data-icon="search"></span><span data-i18n="search">Search documentation</span><kbd>Ctrl K</kbd></button><label class="language-label"><span data-icon="globe"></span><select id="language" aria-label="Documentation language"><option value="en">EN</option><option value="es">ES</option></select></label><a class="github" href="https://github.com/dieguinxos/blast-docs" target="_blank" rel="noopener" aria-label="GitHub repository"><span data-icon="github"></span></a><button id="menu-toggle" class="mobile-menu" aria-label="Open navigation" aria-expanded="false"><span data-icon="menu"></span></button></div>
     </div>
   </header>
@@ -24,12 +25,11 @@
   <div class="layout">
     <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
       <div class="sidebar-top"><span class="eyebrow" data-i18n="workspace">THE DOCUMENTATION</span><button id="side-search" class="side-search"><span data-icon="search"></span><span data-i18n="searchShort">Search docs…</span><kbd>/</kbd></button></div>
-      <div class="product-label"><span class="product-icon" data-icon="speaker"></span><div><strong>Blast Boombox</strong><small>FiveM resource</small></div><span class="version">0.5.0</span></div>
       <nav id="navigation"></nav>
       <div class="sidebar-bottom"><span class="status-dot"></span><span data-i18n="sidebarFooter">Official product guides</span></div>
     </aside>
     <main id="main"><div class="breadcrumbs" id="breadcrumbs"></div><article id="article" tabindex="-1"></article><nav class="page-navigation" id="page-navigation" aria-label="Previous and next pages"></nav><footer><span>© <span id="year"></span> Blast</span><span data-i18n="footer">Built for your server.</span><a href="https://github.com/dieguinxos/blast-docs/issues" target="_blank" rel="noopener" data-i18n="report">Report a docs issue</a></footer></main>
-    <aside class="toc" aria-label="On this page"><div class="eyebrow" data-i18n="onThisPage">ON THIS PAGE</div><nav id="toc-links"></nav><div class="toc-note"><span data-icon="book"></span><p data-i18n="tocNote">Set it up once. Make it yours in game.</p><a href="#admin" data-i18n="adminGuide">Admin panel guide</a></div></aside>
+    <aside class="toc" aria-label="On this page"><div class="eyebrow" data-i18n="onThisPage">ON THIS PAGE</div><nav id="toc-links"></nav><div class="toc-note"><span data-icon="book"></span><p data-i18n="tocNote">Guides for your Blast scripts.</p><a href="#getting-started" data-i18n="gettingStarted">Getting started</a></div></aside>
   </div>
   <dialog id="search-dialog"><div class="search-input-row"><span data-icon="search"></span><input id="search-input" type="search" autocomplete="off" aria-label="Search documentation"><button id="close-search" aria-label="Close search"><kbd>Esc</kbd></button></div><div id="search-results"></div><div class="search-footer"><span data-i18n="searchTip">Search guides, controls and settings</span><span><kbd>↑</kbd> <kbd>↓</kbd> <kbd>Enter</kbd></span></div></dialog>
   <div id="toast" role="status" aria-live="polite"></div>

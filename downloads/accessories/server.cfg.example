@@ -1,6 +1,6 @@
 # Install/start ox_lib and your chosen framework/inventory before BLAST.
 ensure ox_lib
-ensure blast_weapon_charms_assets
+ensure blast_accessories_assets
 ensure blast_accessories
 
 # Replace YOUR_LICENSE with the license characters (without another license:).

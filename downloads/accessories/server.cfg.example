@@ -1,0 +1,10 @@
+# Install/start ox_lib and your chosen framework/inventory before BLAST.
+ensure ox_lib
+ensure blast_weapon_charms_assets
+ensure blast_accessories
+
+# Replace YOUR_LICENSE with the license characters (without another license:).
+add_ace identifier.license:YOUR_LICENSE blast.accessories.admin allow
+
+# Or authorize an existing ACE group you manage:
+# add_ace group.admin blast.accessories.admin allow

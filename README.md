@@ -24,3 +24,12 @@ Use relative paths for assets and hash routes so the site works below the reposi
 This repository documents the product; it does not distribute the resource. Documentation issues belong in the issue tracker. Account, purchase or server-specific support should use the seller's support channel.
 
 The bundled Inter fonts include their original license in `assets/fonts/LICENSE.txt`.
+
+## Clog Creator
+
+`clogs.js` provides 14 English/Spanish guides for Clog Creator 0.2.0 development
+and API 1.0.0. Register it in `portal.js` and load it before the portal script.
+`downloads/clogs/` contains only public inventory entries, the inventory PNG and
+the English API contract. It does not contain the paid resource or user assets.
+The guides distinguish implemented adapters from real-version compatibility
+acceptance and do not certify commercial/processed-Escrow release readiness.

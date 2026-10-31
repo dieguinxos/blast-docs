@@ -5,6 +5,13 @@ independent of the resource version. Existing grant/equip/transfer calls remain
 compatible. `GrantAccessory` remains as a deprecated export and returns
 `catalog_included`: charms belong to the saved design, not separate inventory items.
 
+`ProductionMode=true` is the default. It disables AdminTestAccess, public creation
+and diagnostic tools even when legacy SQL settings requested them. Startup persists
+safe access settings with revision checking, preserving shops/prices/pairs. Admin
+settings/API cannot reopen test access or diagnostics (`production_locked`); an owner
+must explicitly change config.lua for an isolated test server. This access mode
+does not certify the remaining commercial, compatibility or processed-Escrow gates.
+
 ## Start here
 
 ```lua

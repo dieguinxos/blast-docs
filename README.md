@@ -33,3 +33,7 @@ and API 1.0.0. Register it in `portal.js` and load it before the portal script.
 the English API contract. It does not contain the paid resource or user assets.
 The guides distinguish implemented adapters from real-version compatibility
 acceptance and do not certify commercial/processed-Escrow release readiness.
+
+## BLAST Blips
+
+`blips.js`: ten English/Spanish guides, available at `#blips/overview`, included in navigation and global search. Covers installation, editor, custom images, zones, administration, all serialized settings, all seven server exports, backups/imports and diagnostics. Development/acceptance limits are explicit. No private resource data or source distribution.

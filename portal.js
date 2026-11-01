@@ -12,7 +12,8 @@ for(const page of guides){
 const camera=window.CAMERA_DOCS;
 const accessories=window.ACCESSORIES_DOCS;
 const clogs=window.CLOG_DOCS;
-window.PRODUCTS=[{id:'boombox',name:'Blast Boombox',icon:'speaker',version:'0.5.0',pages:guides},{id:'camera',name:'Blast Camera',icon:'camera',version:'0.1.0',pages:camera},{id:'accessories',name:'Blast Accessories',icon:'layers',version:'0.2.0-dev',pages:accessories},{id:'clogs',name:'Blast Clog Creator',icon:'layers',version:'0.2.0-dev',pages:clogs}];
+const blips=window.BLIPS_DOCS;
+window.PRODUCTS=[{id:'boombox',name:'Blast Boombox',icon:'speaker',version:'0.5.0',pages:guides},{id:'camera',name:'Blast Camera',icon:'camera',version:'0.1.0',pages:camera},{id:'accessories',name:'Blast Accessories',icon:'layers',version:'0.2.0-dev',pages:accessories},{id:'clogs',name:'Blast Clog Creator',icon:'layers',version:'0.2.0-dev',pages:clogs},{id:'blips',name:'Blast Blips',icon:'activity',version:'0.1.0-dev',pages:blips}];
 window.PORTAL_PAGES=[
  {id:'home',icon:'book',group:'general',title:L('Welcome to Blast Docs','Bienvenido a Blast Docs'),lead:L('Installation guides, configuration and answers for your Blast scripts. Choose a product to get started.','Guías de instalación, configuración y respuestas para tus scripts de Blast. Elige un producto para empezar.'),sections:[
   section('start','Find your guide','Encuentra tu guía',`<div class="cards"><a class="card" href="#getting-started"><span data-icon="download"></span><strong>Getting started</strong><p>Prepare your server, follow an installation guide and keep your resources up to date.</p></a><a class="card" href="#scripts"><span data-icon="code"></span><strong>Browse scripts</strong><p>Find the documentation for the product you are installing.</p></a></div>`,`<div class="cards"><a class="card" href="#getting-started"><span data-icon="download"></span><strong>Primeros pasos</strong><p>Prepara el servidor, sigue la instalación y mantén tus recursos actualizados.</p></a><a class="card" href="#scripts"><span data-icon="code"></span><strong>Explora los scripts</strong><p>Encuentra la documentación del producto que vas a instalar.</p></a></div>`),
@@ -59,5 +60,13 @@ for(const page of window.PORTAL_PAGES){
     }
   }
 }
-window.DOCS=[...window.PORTAL_PAGES,...guides,...camera,...accessories,...clogs];
+for(const page of window.PORTAL_PAGES)for(const part of page.sections){
+ if(!((page.id==='home'&&part.id==='products')||(page.id==='scripts'&&part.id==='available')))continue;
+ for(const language of ['en','es']){
+  const copy=language==='en'?'Free map studio, custom images, badges, zones and server API.':'Editor gratuito, imágenes, insignias, zonas y API de servidor.';
+  const card=`<a class="card" href="#blips/overview"><span data-icon="activity"></span><strong>Blast Blips</strong><p>${copy}</p><p><span class="bullet-tag">0.1.0-dev</span><span class="bullet-tag">${blips.length} ${language==='en'?'guides':'guías'}</span></p></a>`;
+  part.body[language]=part.body[language].replace('</div>',card+'</div>');
+ }
+}
+window.DOCS=[...window.PORTAL_PAGES,...guides,...camera,...accessories,...clogs,...blips];
 })();
